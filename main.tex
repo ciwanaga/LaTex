@@ -1,17 +1,31 @@
-\documentclass{ltjsarticle}
+\documentclass[a4paper]{ltjsreport}
 \usepackage{luatexja-fontspec}
+\usepackage{graphicx}
 \setmainfont{Hiragino Mincho ProN}
 \setsansfont{Hiragino Sans}
 
+
+
 \title{LuaLaTeX テストドキュメント}
-\author{あなたの名前}
+\author{岩永　知沙季}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
-これはLuaLaTeXでのテストです。
-文字化けせずに表示されるはずです。
+\tableofcontents % 目次を自動生成
+
+\include{chapters/introduction}
+
+\section{研究の背景}
+ここに研究背景について書きます。
+
+\section{本研究の目的}
+ここに目的について書きます。
+
+\chapter{関連研究}
+\section{〇〇に関する研究}
+\subsection{〇〇の手法}
 
 \end{document}
