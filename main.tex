@@ -1,12 +1,18 @@
 \documentclass[a4paper]{ltjsreport}
 \usepackage{luatexja-fontspec}
 \usepackage{graphicx}
+\usepackage{titlesec}
 \setmainfont{Hiragino Mincho ProN}
 \setsansfont{Hiragino Sans}
 
+% 章タイトルの設定
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\chaptertitlename\ \thechapter 章}
+  {20pt}
+  {\LARGE}
 
-
-\title{LuaLaTeX テストドキュメント}
+\title{修士論文}
 \author{岩永　知沙季}
 \date{\today}
 
