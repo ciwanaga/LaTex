@@ -2,8 +2,10 @@
 \usepackage{luatexja-fontspec}
 \usepackage{graphicx}
 \usepackage{titlesec}
+\usepackage{comment}
 \setmainfont{Hiragino Mincho ProN}
 \setsansfont{Hiragino Sans}
+\setcounter{secnumdepth}{3} % subsubにも番号が振られる　目次には出ない
 
 % 章タイトルの設定
 \titleformat{\chapter}[display]
@@ -12,7 +14,7 @@
   {20pt}
   {\LARGE}
 
-\title{修士論文}
+\title{速報実証衛星ARICA-2における〇〇の開発}
 \author{岩永　知沙季}
 \date{\today}
 
@@ -23,15 +25,37 @@
 \tableofcontents % 目次を自動生成
 
 \include{chapters/introduction}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/conclusion}
+\include{chapters/thanks}
 
-\section{研究の背景}
-ここに研究背景について書きます。
+\appendix
+\include{chapters/appendixA}
+\include{chapters/appendixB}
 
-\section{本研究の目的}
-ここに目的について書きます。
 
-\chapter{関連研究}
-\section{〇〇に関する研究}
-\subsection{〇〇の手法}
+
+\begin{comment}
+
+改行は\\ ただし字下げはされない
+新しい段落にする際は一行空白を入れる　字下げもされる
+
+*をつけると目次に表示されない
+
+% 画像テンプレ
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/スクリーンショット 2025-08-03 17.23.28.png}
+  \caption{ここに図のキャプション（説明文）を書きます。}
+  \label{fig:myfigure}
+\end{figure}
+
+図\ref{fig:myfigure}は、本研究の概念図です。
+
+\end{comment}
 
 \end{document}
