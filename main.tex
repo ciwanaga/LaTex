@@ -2,17 +2,37 @@
 \usepackage{luatexja-fontspec}
 \usepackage{graphicx}
 \usepackage{titlesec}
+\usepackage{url}
 \usepackage{comment}
+\usepackage[hidelinks]{hyperref}
 \setmainfont{Hiragino Mincho ProN}
 \setsansfont{Hiragino Sans}
 \setcounter{secnumdepth}{3} % subsubにも番号が振られる　目次には出ない
 
 % 章タイトルの設定
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}
+  {\normalfont\huge}
   {\chaptertitlename\ \thechapter 章}
   {20pt}
   {\LARGE}
+% 節の設定 
+\titleformat{\section}
+  {\normalfont\Large}
+  {\thesection}
+  {1em}
+  {}
+% 項の設定 
+\titleformat{\subsection}
+  {\normalfont\large}
+  {\thesubsection}
+  {1em}
+  {}
+% 目次に出ない小見出しの設定
+\titleformat{\subsubsection}
+  {\normalfont\large}
+  {\thesubsubsection}
+  {1em}
+  {}
 
 \title{速報実証衛星ARICA-2における〇〇の開発}
 \author{岩永　知沙季}
@@ -36,16 +56,38 @@
 \include{chapters/appendixA}
 \include{chapters/appendixB}
 
+\begin{thebibliography}{99}
+\bibitem{1} 河合誠之, 浅野勝晃, ガンマ線バースト, 日本評論社, 2019, 新天文学ライブラリー第5巻
+\bibitem{2} Jeanette Kazmierczak. “NASA’s Swift, Fermi Missions Detect Exceptional Cosmic Blast”. NASA(.gov). 2023-07-26. \url{https://www.nasa.gov/universe/nasas-swift-fermi-missions-detect-exceptional-cosmic-blast/}, (参照日：2024-2-20)
+\bibitem{3} 坂本貴紀, HETE-2って何？, \url{http://www.hp.phys.titech.ac.jp/hete2/whatishete.html}, (参照日：2024-2-20)
+\bibitem{4} Lorella Angelini Jesse Allen, The HETE-2 Satellite, 2020-09-24, \url{https://heasarc.gsfc.nasa.gov/docs/hete2/hete2.html}, (2024-02-17)
+\bibitem{5} 児玉太志, 民間通信衛星を用いたガンマ線バースト速報システムの開発, 2018年度 修士論文
+\bibitem{6} 一般財団法人リモート・センシング技術センター, TDRS, \url{https://www.restec.or.jp/satellite/tdrs.html}
+\bibitem{7} J.D. Myers, The Neil Gehrels Swift Observatory, 2023-09-07, \url{https://swift.gsfc.nasa.gov/}, (2024-02-18)
+\bibitem{8} KDDI株式会社, 【KDDI】イリジウムサービス｜衛星通信/BCP対策｜法人向け, \url{https://biz.kddi.com/service/iridium/}, (参照日：2024-2-20)
+\bibitem{9} Julien's Lab, About｜Iridium Satellites Live Map, \url{https://iridiumwhere.com/about/}, (参照日：2024-2-20)
+\bibitem{10} Globalstar, Satellite Solutions and Services｜Globalstar US, \url{https://www.globalstar.com/en-us/}, (参照日：2024-2-20)
+\bibitem{11} ソニーセミコンダクタソリューションズ株式会社, IoT用ボードコンピュータSPRESENSE™, \url{https://www.sony-semicon.com/ja/products/spresense/index.html}, (参照日：2024-2-20)
+\bibitem{12} JAXA, 革新的衛星技術実証２号機, \url{https://www.kenkai.jaxa.jp/kakushin/kakushin02.html}, (参照日：2024-2-20)
+\bibitem{13} Omron Corporation, 形 D6T MEMS 非接触温度センサ, \url{https://components.omron.com/jp-ja/datasheet_pdf/CDSC-012.pdf}, (参照日：2024-2-20)
+\bibitem{14} Pimoroni, ICM20948 9DoF Motion Sensor Breakout, \url{https://shop.pimoroni.com/products/icm20948?variant=27843993960531}, (参照日：2024-2-20)
+\bibitem{15} 株式会社秋月電子通商, DRV8830モータードライバモジュール, \url{https://akizukidenshi.com/catalog/g/g106273/}, (参照日：2024-2-20)
+\bibitem{16} 辻祐樹, 速報実証衛星 ARICA-2 において用いる太陽センサの開発及び I2C 通信を用いるデバイスの統合, 2022年度 学士論文
+\bibitem{17} 東阪電子機器株式会社, I2C(Inter-Integrated Circuit) について, \url{https://www.lapis-tech.com/jp/common/miconlp/tips/2-17-i2cとは/}, (参照日：2024-2-20)
+\bibitem{18} 青山学院大学理工学部物理・数理学科 坂本研究室, ARICA-2 Preliminary Design Review, \url{https://docs.google.com/presentation/d/16HseKSFk4e2CegcKgMQAkCcH3iP3NXOl/edit#slide=id.p131}, (参照日：2024-2-20)
+\bibitem{19} CubeSpace Satellite System, CubeTorquer Generation 2 Interface Control Document(ICD), \url{https://www.cubespace.co.za/downloads/cs-dev.icd.cr-01_cubetorquer_gen2_icd_ver.1.00.pdf}, (参照日：2024-2-20)
+\bibitem{20} 湯本電機株式会社, PEEKとは？高機能の熱可塑性樹脂の特徴と各種グレード, \url{https://www.yumoto.jp/material-onepoint/plastic-peek}, (参照日：2024-2-20)
+\end{thebibliography}
 
 
 \begin{comment}
 
-改行は\\ ただし字下げはされない
-新しい段落にする際は一行空白を入れる　字下げもされる
+・「memo」で検索すると修正箇所がある
+・改行は\\ ただし字下げはされない
+・新しい段落にする際は一行空白を入れる　字下げもされる
+・*をつけると目次に表示されない
 
-*をつけると目次に表示されない
-
-% 画像テンプレ
+・画像テンプレ
 
 \begin{figure}[htbp]
   \centering

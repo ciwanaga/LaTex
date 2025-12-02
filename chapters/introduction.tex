@@ -2,9 +2,157 @@
 
 \section{研究背景}
 \subsection{ガンマ線バースト（Gamma-Ray Burst：GRB）}
+
+本究室では、ガンマ線バーストと呼ばれる天体現象を主な研究対象としている。ガンマ線バースト（Gamma-Ray Burst：GRB）とは、数ミリ秒から数十秒の間に莫大なエネルギーをガンマ線領域を中心とする電磁波で放出する突発天体現象である（図\ref{1-1}）。ガンマ線バーストは膨大なエネルギーの放射現象であるため、宇宙遠方で発生したものであっても観測することができ、初期宇宙解明の鍵となると期待されている。\cite{1}
+
+ガンマ線バーストの特徴として、発生位置や時刻の予想が困難であり、時間と共に残光が急激に減少するため継続時間が短いという点が挙げられる。そのため、ガンマ線バーストの謎を解明するためには、観測衛星がガンマ線バーストの発生を即座に地上へ伝達し、地上の観測機器から追観測を行うこと重要である。
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[clip,width=8.0cm]{images/introduction/grb_jet_banner.png}
+\caption{ガンマ線バーストの想像図\cite{2}}
+\label{1-1}
+\end{center}
+\end{figure}
+
 \subsection{ガンマ線バースト速報システムの現状}
+前述の通り、ガンマ線バーストの謎を解明するためには発生を速報することが重要であり、我々の研究室ではガンマ線バーストをはじめとする突発天体現象の速報システムを開発し、実証するプロジェクトを開始した。ガンマ線バーストを観測し、速報する衛星として以下の2種類の衛星を紹介する。どちらの衛星もガンマ線バーストの観測衛星として実績があるが、多大な維持労力を要することや一般の利用が難しいことが問題点として挙げられるため、同様の方式で速報することは我々のような一研究室では困難である。
+
+\subsubsection{HETE-2衛星}
+HETE-2衛星（図\ref{1-2}）は2000年10月にNASAによって打ち上げられたガンマ線バースト観測衛星である。全天のほぼ十分の一の領域を常に監視し、ガンマ線バーストが発生した場合、その位置を特定して地上に１分以内に座標を通報することによって地上からの追観測を可能とする。
+
+HETE-2衛星のガンマ線バースト速報システムは、周回軌道である赤道上にほぼ等間隔で設置された14箇所の地上受信局を用いて地上へ発生情報を速報するというものである（図\ref{1-3}）。ここでの地上受信局とは、VHFのレシーバー、アンテナ、コンピュータにより構成され、HETE-2の利用する通信システムは非常に安価であるというメリットがある。しかし、地上受信局を維持、運用するためには多大な労力を要することや地球上で等間隔に地上受信局を設置することが容易ではないことが、この速報システムのデメリットとして挙げられる。\cite{3}
+
+\begin{figure}[htbp]
+\begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[clip,width=\hsize]{images/introduction/Hete_om3b.png}
+\end{center}
+\caption{HETE-2衛星\cite{4}}
+\label{1-2}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[clip,width=\hsize]{images/introduction/HETE-2-2.png}
+\end{center}
+\caption{HETE-2衛星の速報システム\cite{5}}
+\label{1-3}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Swift衛星}
+Swift衛星は2004年11月にNASAによって打ち上げられたガンマ線バースト観測衛星である（図\ref{1-4}）。ガンマ線バーストを検出してから数十秒以内に座標を速報するとともに、Swift衛星に搭載されている紫外線可視望遠鏡UVOTで追観測を行うことが可能である。\cite{1}
+
+Swift衛星のガンマ線バースト速報システムはアメリカとNASAによって打ち上げられたTDRS衛星（Tracking and Data Relay Satellite）を用いたデータ中継衛星システムを用いており、地上局と低軌道周回衛星を中継することでデータの速報を可能とするシステムである（図\ref{1-5}）。非常に優れた速報システムとして成果を上げるが、この速報システムを利用することができるのはNASAのミッションのみである。また、同様のシステムを構築するには膨大な費用を要する。したがって、我々のような一般の一研究室で利用することは困難である。\cite{6}\\
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.4\hsize}
+\begin{center}
+\includegraphics[clip,width=\hsize]{images/introduction/Swift.png}
+\end{center}
+\caption{Swift衛星\cite{7}}
+\label{1-4}
+\end{minipage}
+\begin{minipage}[b]{0.55\hsize}
+\begin{center}
+\includegraphics[clip,width=\hsize]{images/introduction/Swift-2.png}
+\end{center}
+\caption{Swift衛星の速報システム\cite{5}}
+\label{1-5}
+\end{minipage}
+\end{figure}
+
+
 \subsection{速報実証衛星ARICA（AGU Remote Innovative CubeSat Alert system）}
+前章で述べた通り、既存のガンマ線バースト速報衛星は我々一研究室が利用できるようなシステムを用いておらず、我々は新たなガンマ線バースト速報システムの実証を目指すこととなった。そして、2018年度に発足されたのがARICAプロジェクトである。
+
+速報実証衛星ARICA（AGU Remote Innovative CubeSat Alert system）は民間衛星通信を用いたガンマ線バーストをはじめとする突発天体現象の速報を実証することを目的とした超小型人工衛星である（図\ref{1-6}）。ARICAの大きさは1Uと呼ばれる1辺が10cmの立方体であり、規格化されたCubeSatの中では最小のサイズである。
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[clip,width=8.0cm]{images/introduction/ARICA.jpg}
+\caption{速報実証衛星ARICA}
+\label{1-6}
+\end{center}
+\end{figure}
+\newpage
+
+ARICAはJAXAの革新的衛星技術実証2号機の実証テーマに選定され、2021年11月9日に内之浦宇宙空間観測所にて、イプシロンロケット5号機によって打ち上げられた。図\ref{1-7}は実際の打上げの様子である。
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[clip,width=8.0cm]{images/introduction/IMG_0969.JPG}
+\caption{イプシロンロケット5号機打上げの様子}
+\label{1-7}
+\end{center}
+\end{figure}
+
+\subsubsection{民間衛星通信}
+ガンマ線バーストの速報システムとして、ARICAでは民間衛星通信を用いる。民間通信衛星とは民間企業が運用する通信衛星のことであり、前述のHETE-2衛星やSwift衛星の利用するシステムと異なり一般の利用が可能である。ARICAおよび後に記述するARICA-2では、民間通信衛星であるイリジウム衛星とグローバルスター衛星を用いて通信を行う。
+
+\subsubsection*{イリジウム衛星}
+Iridium Communications社の運用するイリジウム衛星（図\ref{1-8}）は、高度780kmに配置された66基の周回衛星により構成されている。ARICAおよびARICA-2では、図\ref{1-9}のSBD（Short Burst Data）と呼ばれる通信端末を用いてイリジウム衛星と通信する。
+
+イリジウム衛星はデータ送信と受信、双方向の通信が可能である。SBDとイリジウム衛星間のデータ通信後、イリジウム衛星がデータリレー形式でアメリカにあるイリジウム地球局まで送信することでデータを地上に下ろすことができる。我々の手元にはイリジウム地球局から電子メール形式でデータが送られてくる仕組みである。\cite{8}
+
+\newpage
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\hsize}
+\begin{center}
+\includegraphics[clip,width=\hsize]{images/introduction/iridium.jpeg}
+\end{center}
+\caption{イリジウム衛星\cite{9}}
+\label{i1-8}
+\end{minipage}
+\begin{minipage}[b]{0.55\hsize}
+\begin{center}
+\includegraphics[clip,width=5.5cm]{images/introduction/SBD.jpg}
+\end{center}
+\caption{イリジウム衛星の通信端末 SBD}
+\label{1-9}
+\end{minipage}
+\end{figure}
+
+
+\subsubsection*{グローバルスター衛星}
+Globalstar社の運用するグローバルスター衛星（図\ref{1-10}）は、高度1,414kmに配置された数十基の周回衛星により構成されている。ARICA-2では、図\ref{1-11}のSTX-3と呼ばれる通信端末を用いてグローバルスター衛星と通信する。
+
+グローバルスター衛星は、地上でのデータ受信である単方向の通信のみ可能である。STX-3からグローバルスター衛星へのデータ送信後、グローバルスター衛星から各国の携帯基地地球局にデータを下ろす。我々はGlobalstar社が提供するSPOT My Globalstarというサイトにて、受信したデータを確認することができる。\cite{10}
+
+\begin{figure}[htbp]
+\begin{minipage}[b]{0.5\hsize}
+\begin{center}
+\includegraphics[clip,width=7.0cm]{images/introduction/Globalstar.png}
+\end{center}
+\caption{グローバルスター衛星\cite{10}}
+\label{1-10}
+\end{minipage}
+\begin{minipage}[b]{0.6\hsize}
+\begin{center}
+\includegraphics[clip,width=6.0cm]{images/introduction/stx3.png}
+\end{center}
+\caption{グローバルスター衛星の通信端末 STX-3}
+\label{1-11}
+\end{minipage}
+\end{figure}
+
+\subsubsection{ARICAの現状}
+ARICAは2021年11月に打ち上げられ、衛星の軌道投入にも成功したが、一度もデータの送受信に成功しないまま運用期間を終えることとなった。原因として可能性が高いと考えられていることを以下に示す。
+
+\begin{enumerate}
+\item 衛星の電源が入っていない
+軌道投入直後に入るはずの電源が何かしらの原因でOFFのままの状態になってしまっていると考えられる。
+\item 電力収支に問題がある
+衛星の姿勢制御ができず、太陽電池パネルを太陽方向に向けることが困難であることから、衛星内の電力消費量と電力供給量が合っていないと考えられる。
+\item 民間衛星との通信可能時間が短い
+衛星の姿勢制御ができず、民間衛星通信のためのアンテナを民間衛星方向に向けることが困難であることから、民間衛星との通信可能時間が少ないと考えられる。
+\end{enumerate}
+
+ARICAの失敗を受け、本研究室ではARICAの次号機であるARICA-2の開発を進めることとなった。
+
 
 \section{本研究の目的}
 
+
 \section{本論文の構成}
+本論文は6つの章から構成される。第1章では、研究背景であるGRBとその速報システムの現状、民間衛星通信を用いたGRB速報システムの実証衛星であるARICAについて述べ、本研究の目的を説明した。第2章では、速報実証衛星ARICA-2の概要について述べる。
